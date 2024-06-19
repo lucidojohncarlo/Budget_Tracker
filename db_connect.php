@@ -1,19 +1,19 @@
 <?php
 //// Update these values with your actual database credentials
-//$servername = getenv('DB_Server');
-//$username = getenv('DB_Username');
-//$password = getenv('DB_Password');
-//$dbname = getenv('DB_Database');
-//
+$servername = getenv('DB_Server');
+$username = getenv('DB_Username');
+$password = getenv('DB_Password');
+$dbname = getenv('DB_Database');
+
 //// $servername ="jcserver.mysql.database.azure.com" ;
 //// $username = "johncarlo";
 //// $password = "Jhared123";
 //// $dbname = "budget_tracker";
 //
- $servername ="localhost" ;
- $username = "root";
- $password = "";
- $dbname = "budget_tracker";
+// $servername ="localhost" ;
+// $username = "root";
+// $password = "";
+// $dbname = "budget_tracker";
 //
 //// SSL configuration (optional, uncomment if needed)
 //// $ssl_ca = '/path/to/ca-cert.pem'; // Update with the path to your CA certificate
