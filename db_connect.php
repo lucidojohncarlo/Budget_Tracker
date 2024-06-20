@@ -1,18 +1,18 @@
 <?php
 //// Update these values with your actual database credentials
-$servername = getenv('DB_Server');
-$username = getenv('DB_Username');
-$password = getenv('DB_Password');
-$dbname = getenv('DB_Database');
+// $servername = getenv('DB_Server');
+// $username = getenv('DB_Username');
+// $password = getenv('DB_Password');
+// $dbname = getenv('DB_Database');
 
-//// $servername ="jcserver.mysql.database.azure.com" ;
-//// $username = "johncarlo";
-//// $password = "Jhared123";
-//// $dbname = "budget_tracker";
+$servername ="jcserver.mysql.database.azure.com" ;
+$username = "johncarlo";
+$password = "Jhared123";
+$dbname = "budget_tracker";
 //
 // $servername ="localhost" ;
 // $username = "root";
-// $password = "";
+// $password = "12345";
 // $dbname = "budget_tracker";
 //
 //// SSL configuration (optional, uncomment if needed)
@@ -54,6 +54,20 @@ $dbname = getenv('DB_Database');
 ////echo "Connected successfully!";
 //
 $conn = new mysqli($servername, $username, $password, $dbname);
+// Path to the CA certificate
+// $ca_cert = '/home/site/wwwroot/DigiCertGlobalRootCA.pem';
+//
+// // Set SSL parameters
+// $conn->ssl_set(NULL, NULL, $ca_cert, NULL, NULL);
+// $conn->options(MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);
+//
+// // Reconnect with SSL
+// if (!$conn->real_connect($servername, $username, $password, $dbname, NULL, NULL, MYSQLI_CLIENT_SSL)) {
+//     die('Connection error: (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
+// }
+//
+// echo "Connected successfully";
+
 //
 //// $conn = new mysqli($servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
 //
