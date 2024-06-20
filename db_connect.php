@@ -5,7 +5,7 @@
 // $password = getenv('DB_Password');
 // $dbname = getenv('DB_Database');
 
-$servername ="jcserver.mysql.database.azure.com" ;
+$servername ="johncarlolucido.mysql.database.azure.com" ;
 $username = "johncarlo";
 $password = "Jhared123";
 $dbname = "budget_tracker";
