@@ -3,7 +3,7 @@
   <system.webServer>
     <handlers>
       <!-- This section is required for PHP support on Azure -->
-      <add name="PHP_via_FastCGI" path="*.php" verb="*" modules="FastCgiModule" scriptProcessor="D:\Program Files (x86)\PHP\v7.4\php-cgi.exe" resourceType="Either" />
+      <add name="PHP_via_FastCGI" path="*.php" verb="*" modules="FastCgiModule" scriptProcessor="C:\xampp\php\php-cgi.exe" resourceType="Either" />
     </handlers>
     <defaultDocument>
       <files>
