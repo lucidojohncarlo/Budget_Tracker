@@ -9,10 +9,26 @@ $servername ="johncarlolucido.mysql.database.azure.com" ;
 $username = "johncarlo";
 $password = "Jhared123";
 $dbname = "budget_tracker";
+$ssl_ca = "C:\xampp\htdocs\Budget_Tracker\DigiCertGlobalRootCA.pem";
+
+
+// Create a new MySQLi object
+$conn = new mysqli();
+
+// Set the SSL CA certificate
+$conn->ssl_set(NULL, NULL, $ssl_ca, NULL, NULL);
+
+// Connect to the database
+$conn->real_connect($servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 //
 // $servername ="localhost" ;
 // $username = "root";
-// $password = "12345";
+// $password = "";
 // $dbname = "budget_tracker";
 //
 //// SSL configuration (optional, uncomment if needed)
@@ -53,7 +69,7 @@ $dbname = "budget_tracker";
 ////
 ////echo "Connected successfully!";
 //
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
 // Path to the CA certificate
 // $ca_cert = '/home/site/wwwroot/DigiCertGlobalRootCA.pem';
 //
@@ -78,7 +94,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 //
 //// Check connection
 //if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
+//   die("Connection failed: " . $conn->connect_error);}
 //}
 //// Optional: Set charset
 ////$conn->set_charset("utf8mb4");
@@ -113,6 +129,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 //
 //// Return the connection object for use in other scripts
 //return $conn;
-
+echo "Connected successfully using SSL";
 
 ?>
