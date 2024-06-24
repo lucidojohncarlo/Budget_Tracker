@@ -2,7 +2,7 @@
 $conn = mysqli_init();
 
 // Set the SSL parameters
-$ca_cert = "DigiCertGlobalRootCA.crt.pem"; // Path to the CA certificate
+$ca_cert = "C:\xampp\htdocs\Budget_Tracker\DigiCertGlobalRootCA.pem"; // Path to the CA certificate
 mysqli_ssl_set($conn, NULL, NULL, $ca_cert, NULL, NULL);
 
 $servername = "lucidojohncarlo.mysql.database.azure.com";
