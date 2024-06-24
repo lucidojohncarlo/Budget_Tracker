@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         addExpense();
     });
-
-    document.getElementById('resetButton').addEventListener('click', function() {
-        resetAll();
-    });
 });
 
 function loadData() {
@@ -130,5 +126,4 @@ function removeExpense(id) {
             })
             .catch(error => console.error('Error:', error));
     }
-    
 }

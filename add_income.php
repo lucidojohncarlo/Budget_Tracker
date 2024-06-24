@@ -14,6 +14,5 @@ $conn->query("INSERT INTO audit_trail (message) VALUES ('$message')");
 $stmt->close();
 $conn->close();
 
-// Reload data after operation
 require 'load_data.php';
 ?>

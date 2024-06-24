@@ -19,7 +19,7 @@
             <!-- Add Income Form -->
             <div class="add-income-container">
                 <h4>Add Income</h4>
-                <form id="incomeForm" method="POST" action="add_income.php">
+                <form id="incomeForm" method="POST">
                     <div class="form-group">
                         <label for="income">Income Source:</label>
                         <input class="form-control" type="text" id="income" name="income">
@@ -35,7 +35,7 @@
             <!-- Add Expense Form -->
             <div class="add-expense-container mt-4">
                 <h4>Add Expense</h4>
-                <form id="expenseForm" method="POST" action="add_expense.php">
+                <form id="expenseForm" method="POST">
                     <div class="form-group">
                         <label for="expense">Expense Title:</label>
                         <input class="form-control" type="text" id="expense" name="expense">
@@ -49,10 +49,7 @@
             </div>
 
             <!-- Reset All Button -->
-            <button id="resetButton" class="btn btn-danger form-control mt-2">Reset All</button>
-
-            <!-- Button to navigate to index.php -->
-
+            <button class="btn btn-danger form-control mt-2" onclick="resetAll()">Reset All</button>
         </div>
 
         <!-- Display Section -->
